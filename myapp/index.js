@@ -25,6 +25,8 @@ const intializeDBandServer = async () => {
 };
 
 intializeDBandServer();
+// app.listen(3001); // if you give twice times with same port will get error. if
+//  with different ports will run on both ports
 
 app.get("/books/", async (request, response) => {
   const sqlQuery = "select * from book Order BY book_id";
